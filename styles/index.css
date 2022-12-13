@@ -16,6 +16,30 @@ body {
   width: 100%;
   height: 60px;
 }
+.nav__menu {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 99;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: black;
+  color: white;
+  list-style: none;
+  padding-top: 4rem;
+}
+.nav__hamburger {
+  position: fixed;
+  z-index: 100;
+  top: 1%;
+  right: 1rem;
+  padding: 4px;
+  border: #4A2c2a solid 1px;
+  background: rgba(255, 255, 255, 0.065);
+  cursor: pointer;
+}
 .nav__logo {
   font-family: "Raleway", sans-serif;
   font-size: 2em;
@@ -25,24 +49,12 @@ body {
 .nav__logo--image {
   height: 60px;
 }
-.nav__list {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-top: 4%;
-  margin-right: 5%;
-}
-.nav__links {
-  list-style: none;
-}
-.nav__link {
-  text-transform: uppercase;
+.nav__menuItem {
+  display: block;
+  margin: 2rem 4rem;
+  font-size: 1.8rem;
+  color: white;
   text-decoration: none;
-  font-family: "Lato", sans-serif;
-  color: #4A2c2a;
-}
-.nav__link:hover {
-  border-bottom: 2px solid #4A2c2a;
 }
 
 .home {
@@ -209,4 +221,12 @@ input {
 
 input:nth-child(4) {
   height: 6em;
+}
+
+.closeIcon {
+  display: none;
+}
+
+.showMenu {
+  transform: translateY(0);
 }/*# sourceMappingURL=index.css.map */
