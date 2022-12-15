@@ -9,47 +9,22 @@
 //reddish brown #4A2c2a
 //tan1  #cc9966
 //tan2 #c19A6b
-html {
-    margin: 0%;
-}
 
-body {
-    margin: 0%;
-}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
 .nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #c19A6b;
+    background-color:#c19A6b;
     margin: 0%;
     width: 100%;
     height: 60px;
 
-    &__menu {
-        position: fixed;
-        transform: translateY(-100%);
-        transition: transform 0.2s;
-        top: 99;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 99;
-        background: rgb(242, 239, 239);
-        color: rgb(17, 16, 16);
-        list-style: none;
-        padding-top: 4rem;
-    }
-    &__hamburger {
-        position: fixed; 
-        z-index: 100;
-        top: 1%;
-        right: 1rem;
-        padding: 4px;
-        border:#4A2c2a solid 1px;
-        background: rgba(255, 255, 255, 0.065);
-        cursor: pointer;
-    }
 
     &__logo {
         font-family: 'Raleway', sans-serif;
@@ -63,13 +38,7 @@ body {
         height: 60px;
     }
 
-    &__menuItem {
-        display: block;
-        margin: 2rem 4rem;
-        font-size: 1.8rem;
-        color: white;
-        text-decoration: none;
-    }
+
 
     // &__list{
     //     display: flex;
@@ -95,26 +64,87 @@ body {
     // }
 }
 
+.menuItem {
+    display: block;
+    margin: 2rem 4rem;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+}
+
+.menuItem:hover {
+    text-decoration: underline;
+}
+
+.hamburger {
+    position: fixed;
+    z-index: 100;
+    top: 1rem;
+    right: 1rem;
+    padding: 4px;
+    border: #c19A6b;
+    background: #c19A6b;
+    cursor: pointer;
+    
+   
+}
+
+.closeIcon {
+    display: none;
+}
+
+.menu {
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+    z-index: 99;
+    background: #c19A6b;
+    color: white;
+    list-style: none;
+    padding-top: 4rem;
+}
+
+.showMenu {
+    transform: translateY(0);
+}
+
 .home {
-    background-image: linear-gradient(to top, #4a2c2ad7, #523b351c), url("../images/blackLaw.jpeg");
-    width: auto;
-    height: 550px;
-    background-position: center;
+   background: url('../images/lady-justice.jpeg');
+   width: 100%;
+   height:500px;
+   background-repeat: no-repeat;
 
     &__intro {
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        
+
 
     }
 
     &__intro--welcome {
         padding-top: 30%;
+      
     }
-
+    &__intro--linda {
+        width: 50%;
+        opacity: 0.2;;
+       
+        
+    }
     &__intro--header {
         font-family: 'Merriweather', serif;
-        font-size: 1.5em;
+        font-size: 2em;
         width: 95%;
         margin: auto;
+        color:#eadfd2;
+        
+        position: absolute;
 
     }
 
@@ -125,12 +155,19 @@ body {
         width: 80%;
         margin: auto;
         padding-top: 10%;
+        color: #eadfd2;
+        
+
+        
+
+        
+
 
 
     }
 
     &__intro--button {
-        margin-top: 0%;
+        margin-top: 5%;
         border-style: none;
         padding: 3%;
         margin-top: 5%;
@@ -138,9 +175,12 @@ body {
         font-weight: bold;
         border: 2px solid #c19A6b;
         color: #c19A6b;
+        width:40%;
+        margin: auto;
 
 
     }
+   
 }
 
 .about {
@@ -148,6 +188,7 @@ body {
     flex-direction: column;
     margin: auto;
     background-color: #ddcebc;
+    padding-bottom: 5%;
 
     &__bio {
         text-align: center;
@@ -188,13 +229,24 @@ body {
     }
 
     &__content--border {
-        width: 200px;
+        width: 213px;
         height: 250px;
         position: absolute;
-        top: 115%;
+        top: 79%;
         border-bottom: #c19A6b 10px solid;
         border-right: #c19A6b 10px solid;
         border-radius: 1%;
+
+    }
+    &__button{
+        margin-top: 0%;
+        border-style: none;
+        padding: 3%;
+        margin-top: 5%;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        border: 2px solid #c19A6b;
+        color: #c19A6b;
 
     }
 }
@@ -302,17 +354,4 @@ input {
 
 input:nth-child(4) {
     height: 6em;
-}
-
-
-
-.closeIcon {
- display: none;
-
-}
-
-
-
-.showMenu {
-    transform: translateY(0);
 }
