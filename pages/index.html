@@ -19,9 +19,9 @@
         </a>
         <ul class="menu">
             <li><a class="menuItem" href="#about">About</a></li>
-            <li ><a class="menuItem" href="#services">Services</a></li>
-            <li ><a class="menuItem" href="#contact">Contact</a></li>
-           
+            <li><a class="menuItem" href="#services">Services</a></li>
+            <li><a class="menuItem" href="#contact">Contact</a></li>
+
 
         </ul>
         <button class="hamburger">
@@ -31,25 +31,25 @@
         </button>
     </nav>
     <!---Home-->
-    <section  id="home" class="home">
-       
+    <section id="home" class="home">
+
         <div class="home__intro">
-            
+
             <div class="home__intro--welcome">
                 <h1 class="home__intro--header">Law Offices of Linda Boadu</h1>
-                <h2 class="home__intro--subheader"> We share our humanity with clients and provide a safe, emotionally
-                    supportive refuge during times of crisis or transition.</h2>
-               
+                <p class="home__intro--subheader"> We share our humanity with clients and provide a safe, emotionally
+                    supportive refuge during times of crisis or transition.</p>
+
             </div>
-            
+
             <button class="home__intro--button">Book A Consultation</button>
-              
+
 
         </div>
-       
 
-        
-        
+
+
+
 
 
 
@@ -58,8 +58,8 @@
     <section id="about" class="about">
         <div class="about__content">
             <image class="about__content--image" src="../images/linda1.jpg"></image>
-            
-            </div>
+
+        </div>
 
         </div>
         <div class="about__bio">
@@ -84,21 +84,27 @@
     <!---Services-->
     <section class="services" id="services">
         <h1 class="services__tittle"> PRACTICES</h1>
-        <div class="services__service">
-            <image class="services__service--icon" src="../images/family.png"></image>
-            <h3 class="services__service--tittle">Family Law</h3>
-            <p class="services__service--description">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <div class="services__service">
-            <image class="services__service--icon" src="../images/immigration.png"></image>
-            <h3 class="services__service--tittle">Immigration Law</h3>
-            <p class="services__service--description">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <div class="services__container">
+            <div class="services__service">
+                <image class="services__service--icon" src="../images/family.png"></image>
+                <h3 class="services__service--tittle">Family Law</h3>
+                <p class="services__service--description">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do
+                    eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="services__service" >
+                <image class="services__service--icon" src="../images/immigration.png" style="height:60px;margin-bottom: 2px;"></image>
+                <h3 class="services__service--tittle">Immigration Law</h3>
+                <p class="services__service--description">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do
+                    eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+            </div>
 
         </div>
+
 
 
 
@@ -123,12 +129,23 @@
 
 
         </div>
-        <form class="contact__form">
+        <form id="form" class="contact__form" method="post">
             <h3 class="contact__form--tittle">Contact Us</h3>
-            <input type="text" id="name" name="name" placeholder="Name" />
-            <input type="email" id="email" name="email" placeholder="Email">
-            <input for="text" id="text" name="message" placeholder="Message">
-            <button class="contact__button">SUBMIT</button>
+            <div class="contact__container">
+                <div class="contact__user">
+                    <input required class="username" type="text" id="name" name="name" placeholder="Name" />
+                    <input required class="email" type="email" id="email" name="email" placeholder="Email">
+
+                </div>
+                
+                <div class="contact__message">
+                    <input required class="message" for="text" id="text" name="message" placeholder="Message">
+                </div>
+
+            </div>
+
+            <button class="button" name="submit" type="submit" id="contact-submit" data-submit="...Sending">SUBMIT</button>
+
 
         </form>
 
@@ -140,6 +157,44 @@
     </footer>
 
     <script src="../js/script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("iexvDTEKoesxhEBE9");
+        })();
+        function validate() {
+            let form = document.getElementById("form")
+            let name = document.querySelector(".username");
+            let email = document.querySelector(".email");
+            let msg = document.querySelector(".message");
+            let btn = document.querySelector(".button");
+
+            btn.addEventListener("click", (e) => {
+                e.preventDefault();
+
+
+                sendmail(name.value, email.value, msg.value);
+
+                form.reset();
+
+
+            });
+        }
+        validate();
+
+
+        function sendmail(name, email, msg) {
+            emailjs.send("service_1pjmz99", "template_6znzzi4", {
+                to_name: "Lind Boadu",
+                from_name: email,
+                message: msg,
+            });
+        }
+
+
+    </script>
+
 </body>
 
 </html>
