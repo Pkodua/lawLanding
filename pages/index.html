@@ -15,7 +15,7 @@
     <!--navbar--->
     <nav class="nav">
         <a class="nav__logo" href="#home">
-            <image class="nav__logo--image" src="../images/lbl.png" alt="lbl law"></image>
+            <image class="nav__logo--image" src="../images/1.png" alt="lbl law"></image>
         </a>
         <ul class="menu">
             <li><a class="menuItem" href="#about">About</a></li>
@@ -32,17 +32,19 @@
     </nav>
     <!---Home-->
     <section id="home" class="home">
+        <div class="home__arch">
 
+        </div>
+        <img class="home__hero" src="../images/linda3.png" />
         <div class="home__intro">
 
             <div class="home__intro--welcome">
-                <h1 class="home__intro--header">Law Offices of Linda Boadu</h1>
-                <p class="home__intro--subheader"> We share our humanity with clients and provide a safe, emotionally
-                    supportive refuge during times of crisis or transition.</p>
+                <h1 class="home__intro--header">TRUSTED LEGAL SOLUTIONS</h1>
+                <p class="home__intro--subheader">Empathy. Expertise. Results. </p>
 
             </div>
 
-            <button class="home__intro--button">Book A Consultation</button>
+            <button class="home__intro--button">Schedule A Consultation</button>
 
 
         </div>
@@ -56,21 +58,25 @@
     </section>
     <!--about section-->
     <section id="about" class="about">
+        <div class="about__backdrop"></div>
         <div class="about__content">
-            <image class="about__content--image" src="../images/linda1.jpg"></image>
+            <image class="about__content--image" src="../images/gavel.jpg"></image>
 
         </div>
 
         </div>
         <div class="about__bio">
-            <h2 class="about__bio--header">ABOUT ME</h2>
-            <p class="about__bio--paragraph">Linda Boadu esq. lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod
-                temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                occaecat cupidatat no proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            <button class="about__button">Book A Consultation</button>
+
+            <p class="about__bio--paragraph">At Linda Boadu Law, we understand the profound impact that
+                family matters can have on your life. Emotions run high, and the
+                legal complexities can be overwhelming. But worry not. Our
+                dedicated team of experienced family lawyers is here to be your
+                rock, providing the unwavering support and expert guidance you
+                need during this challenging time. With our compassionate
+                approach and extensive knowledge, we are committed to
+                achieving the best possible outcomes for you and your loved
+                ones.</p>
+
 
         </div>
 
@@ -81,78 +87,75 @@
 
 
     </section>
-    <!---Services-->
+    <!---quote section-->
+    <section class="quote">
+        <p class="quote__content">
+            "With us, you're not just a client; you're part of
+            our family. Your journey becomes
+            our journey, and we'll be there every step of the
+            way."
+        </p>
+
+    </section>
+
     <section class="services" id="services">
-        <h1 class="services__tittle"> PRACTICES</h1>
-        <div class="services__container">
-            <div class="services__service">
-                <image class="services__service--icon" src="../images/family.png"></image>
-                <h3 class="services__service--tittle">Family Law</h3>
-                <p class="services__service--description">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do
-                    eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            <div class="services__service" >
-                <image class="services__service--icon" src="../images/immigration.png" style="height:60px;margin-bottom: 2px;"></image>
-                <h3 class="services__service--tittle">Immigration Law</h3>
-                <p class="services__service--description">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do
-                    eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 
-            </div>
-
-        </div>
-
-
+        <img class="services__service1" src="../images/immigrationLaw.png" />
+        <img class="services__service2" src="../images/divorce.png" />
+        <img class="services__service3" src="../images/immigrationLaw.png" />
 
 
     </section>
     <!--contact section-->
     <section id="contact" class="contact">
-        <div class="contact__socials">
-            <div class="contact__socials--container">
-                <image class="contact__social" src="../images/facebook.png"></image>
-                <p class="contact__social--tittle">Facebook</p>
-            </div>
-            <div class="contact__socials--container">
-                <image class="contact__social" src="../images/insta.png"></image>
-                <p class="contact__social--tittle">Instagram</p>
-            </div>
-            <div class="contact__socials--container">
-                <image class="contact__social" src="../images/twitter.png"></image>
-                <p class="contact__social--tittle">Twitter</p>
-
-            </div>
+        <div class="contact__content">
+            <form id="form" class="contact__form" method="post">
 
 
-
-        </div>
-        <form id="form" class="contact__form" method="post">
-            <h3 class="contact__form--tittle">Contact Us</h3>
-            <div class="contact__container">
                 <div class="contact__user">
                     <input required class="username" type="text" id="name" name="name" placeholder="Name" />
                     <input required class="email" type="email" id="email" name="email" placeholder="Email">
 
                 </div>
+
                 
-                <div class="contact__message">
                     <input required class="message" for="text" id="text" name="message" placeholder="Message">
-                </div>
-
-            </div>
-
-            <button class="button" name="submit" type="submit" id="contact-submit" data-submit="...Sending">SUBMIT</button>
+               
+                <button class="button" name="submit" type="submit" id="contact-submit" data-submit="...Sending">SUBMIT
+                </button>
 
 
-        </form>
+            </form>
+        </div>
+
+
+
+
+
 
 
     </section>
     <!--footer-->
-    <footer>
+    <footer class="footer">
+        <div class="footer__container">
+            <img class="footer__logo" src="../images/2.png" alt="logo2">
+        </div>
+        <h2 class="footer__title"> Trusted Legal Solutions</h2>
+        <div class="footer__socials">
+            <img src="../images/insta.png" alt="insta">
+            <img src="../images/facebook.png" alt="facebook">
+            <img src="../images/twitter.png" alt="twitter">
+        </div>
+        <div class="footer__sitelinks">
+            <h3 class="footer__subheader">Site Links</h3>
+            <ul>
+                <li class="footer__links">About</li>
+                <li  class="footer__links">Services</li>
+                <li  class="footer__links">Contact Us</li>
+            </ul>
+            
+
+        </div>
 
     </footer>
 
